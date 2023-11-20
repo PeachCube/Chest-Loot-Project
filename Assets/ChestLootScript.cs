@@ -1,16 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 
 public class ChestLootScript : MonoBehaviour
 {
     
-    [Header("ChestTypes")]
-    [SerializeField] private string type;
-
+    [Header("ChestDrops")]
+    [SerializeField] private string drop;
+    
     void Start()
     {
-        
+        List<ChestLootScript> woodenChest = new List<ChestLootScript>();
+            woodenChest.Add(new ChestLootScript());
+            woodenChest.Add(new ChestLootScript());
     }
 
     void Update()
@@ -22,6 +25,7 @@ public class ChestLootScript : MonoBehaviour
     }
     void LootPicker()
     {
-
+        Debug.Log("got "+drop);
     }
+    
 }
